@@ -8,16 +8,39 @@ Contoh:
 Create a folder called git-basic. mkdir git-basic
 cd into the git-basic folder. cd git-basic
 ...
+
 Questions
 Answer the following questions
 
 What does git clean do?
+membersihkan file yang tidak terlacak di repo
+
 What do the -d and -f flags for git clean do?
+git clean -f, Jika variabel konfigurasi Git clean.requireForce tidak disetel ke false, git clean akan menolak untuk menghapus file atau direktori kecuali diberi -f atau -i. Git akan menolak untuk memodifikasi repositori git bersarang yang tidak terlacak (direktori dengan subdirektori .git) kecuali -f kedua diberikan.
+git clean -d
+Biasanya, ketika tidak ada <path> yang ditentukan, git clean tidak akan muncul kembali ke direktori yang tidak terlacak untuk menghindari penghapusan terlalu banyak. Tentukan -d untuk membuatnya berulang ke direktori seperti itu juga. Jika ada jalur yang ditentukan, -d tidak relevan; semua file yang tidak terlacak yang cocok dengan jalur yang ditentukan (dengan pengecualian untuk direktori git bersarang yang disebutkan di bawah --force) akan dihapus.
+
 What git command creates a branch?
+git branch
+
 What is the difference between a fast-forward and recursive merge?
+fast-forward, tidak ada commit baru pada master sehingga tidak akan terjadi konflik
+recursive merge, merge berulang sehingga memungkinkan terjadi konflik
+
 What git command changes to another branch?
+git checkout namaBranch
+
 How do you remove modified or deleted files from the working directory?
+git add -u
+
 What git command deletes a branch?
+git branch -d namaBranch
+
 What does the git diff command do?
+melacak perbedaan pada perubahan yang dibuat di file
+
 How do you remove files from the staging area?
+git reset namaFile
+
 How do merge conflicts happen?
+ketika kita melakukan merge namun git tidak mampu merging otomatis
