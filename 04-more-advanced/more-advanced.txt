@@ -8,5 +8,13 @@ Questions
 Answer the following questions
 
 What is the difference between git reset and git revert. When would you use one over the other?
+git reset akan membatalkan semua perubahan termasuk commit terakhir.
+git revert akan membatalkan semua perubahan terkecuali commit terakhir.
+
 What is the difference between git merge and git rebase. When would you use one over the other?
+git merge untuk menggabungkan branch.
+git rebase akan menerapkan kembali commit di atas base tip lainnya.
+
 What is the difference between git stash pop and git stash apply. When would you use one over the other?
+git stash pop untuk menerapkan stash dan kemudian segera menjatuhkannya dari stack.
+git stash apply untuk menerapkan stash ke file dan/atau ke indeks.
